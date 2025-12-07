@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoveIt - Packers & Movers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: #0000001a;
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em #0000001a, inset 0 .125em .5em #00000026;
+    }
+    .icon-square {
+      width: 3rem;
+      height: 3rem;
+      border-radius: .75rem;
+      background-color: #0d6efd !important;
+    }
+    .boxes {
+      position: relative;
+      right: 3px;
+      top: 3px;
+    }
+
+    #themeToggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav-Bar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="font-weight: 600; font-size: 25px;">
+        <img src="boxes.svg" alt="boxes" height="25px">
+        MoveIt
+      </a> 
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Packing</a></li>
+              <li><a class="dropdown-item" href="#">Loading/Unloading</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Storage Solutions</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact us</a></li>
+        </ul>
+        <form id="searchForm" class="d-flex" role="search">
+          <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div id="searchResult" class="text-center mt-2"></div>
+
+  <!-- Divider -->
+  <div class="b-example-divider"></div>
+
+  <!-- Hero -->
+  <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg"> 
+    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3"> 
+      <h1 class="display-4 fw-bold lh-1 text-body-emphasis">Move With Joy</h1> 
+      <p class="lead">Welcome to MoveIt, your trusted moving partner. We make relocation seamless, efficient, and stress-free!</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2 fw-bold quote-btn">Get Quote</button> 
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact us</button> 
+      </div> 
+    </div> 
+    <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg"> 
+      <img class="rounded-lg-3" src="moving-van.jpg" alt="moving van" width="820"> 
+    </div> 
+  </div>
+
+  <!-- Divider -->
+  <div class="b-example-divider"></div>
+
+  <!-- Features -->
+  <div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Why Move With Us?</h2> 
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"> 
+      <div class="col d-flex align-items-start"> 
+        <div class="icon-square bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+          <img src="briefcase.svg" alt="briefcase">
+        </div> 
+        <div> 
+          <h3 class="fs-2">Professional</h3> 
+          <p>Trained professionals ensure a smooth, careful move from start to finish.</p> 
+          <a href="#" class="btn btn-primary quote-btn">Get a quote</a> 
+        </div> 
+      </div> 
+      <div class="col d-flex align-items-start"> 
+        <div class="icon-square bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+          <img src="bus-front.svg" alt="bus-front">
+        </div> 
+        <div> 
+          <h3 class="fs-2">Countrywide</h3> 
+          <p>We handle moves across the nation with the same dedication and reliability.</p>
+          <a href="#" class="btn btn-primary quote-btn">Get a quote</a> 
+        </div> 
+      </div> 
+      <div class="col d-flex align-items-start"> 
+        <div class="icon-square bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> 
+          <img src="chat-square-heart.svg" alt="chat-square-heart">
+        </div> 
+        <div> 
+          <h3 class="fs-2">Personal Touch</h3> 
+          <p>Every customer gets personalized service to make moving joyful.</p> 
+          <a href="#" class="btn btn-primary quote-btn">Get a quote</a> 
+        </div> 
+      </div> 
+    </div> 
+  </div>
+
+  <!-- Carousel -->
+  <div class="container mb-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="family.jpg" class="d-block w-100" alt="..."></div>
+        <div class="carousel-item"><img src="dog.jpg" class="d-block w-100" alt="..."></div>
+        <div class="carousel-item"><img src="couple.jpg" class="d-block w-100" alt="..."></div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 fw-bold">© 2025 MoveIt, Inc</p>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto text-decoration-none fw-bold">
+      <img class="boxes" src="boxes.svg" alt="boxes" style="height: 30px;">
+      <span> MoveIt</span>
+    </a> 
+    <ul class="nav col-md-4 justify-content-end"> 
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary fw-bold">Home</a></li> 
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary fw-bold">Features</a></li> 
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary fw-bold">Pricing</a></li> 
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary fw-bold">FAQs</a></li> 
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary fw-bold">About</a></li> 
+    </ul>
+  </footer>
+
+  <!-- Quote Modal -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Get a Free Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="quoteForm">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Move Details</label>
+              <textarea class="form-control" id="details" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Theme Toggle -->
+  <button id="themeToggle">🌙</button>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Modal for all "Get Quote" buttons
+    const quoteButtons = document.querySelectorAll('.quote-btn');
+    const quoteModal = new bootstrap.Modal(document.getElementById('quoteModal'));
+    quoteButtons.forEach(btn => btn.addEventListener('click', () => quoteModal.show()));
+
+    // Handle form submission
+    document.getElementById('quoteForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const data = {
+        name: name.value,
+        email: email.value,
+        details: details.value
+      };
+      localStorage.setItem('quoteData', JSON.stringify(data));
+      alert('Thank you! Your quote request has been saved.');
+      quoteModal.hide();
+      e.target.reset();
+    });
+
+    // Search feature
+    document.getElementById('searchForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const query = document.getElementById('searchInput').value.trim();
+      const resultDiv = document.getElementById('searchResult');
+      if (query) {
+        resultDiv.innerHTML = `<div class='alert alert-info mt-2'>You searched for: <strong>${query}</strong></div>`;
+      } else {
+        resultDiv.innerHTML = '';
+      }
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    let darkMode = true;
+    themeToggle.addEventListener('click', () => {
+      darkMode = !darkMode;
+      document.documentElement.setAttribute('data-bs-theme', darkMode ? 'dark' : 'light');
+      themeToggle.textContent = darkMode ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
